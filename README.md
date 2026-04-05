@@ -1,16 +1,63 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br />
+<div align="center">
+  <a href="https://github.com/zidanesalim/CurrencyConverter">
+    <img src="public/CurrencyConvertIcon.png" alt="Logo" width="960" height="560">
+  </a>
 
-Currently, two official plugins are available:
+  <h3 align="center">Currency Converter</h3>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About The Project
 
-## React Compiler
+[![Product Screenshot][product-screenshot]](https://github.com/zidanesalim/CurrencyConverter)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A minimal currency converter that lets you quickly convert between major currencies using live exchange rates — no API key required.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built With
+
+* <img src="https://img.shields.io/badge/React-3ba8f2?style=for-the-badge&logo=react&logoColor=white"/>
+* <img src="https://img.shields.io/badge/Vite-9135FF?style=for-the-badge&logo=vite&logoColor=white"/>
+* <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+* <img src="https://img.shields.io/badge/Shadcn/UI-000000?style=for-the-badge&logo=shadcnui&logoColor=white"/>
+
+## Getting Started
+
+### Prerequisites
+
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/zidanesalim/CurrencyConverter.git
+   ```
+2. Install dependencies
+   ```sh
+   npm install
+   ```
+3. Start the dev server
+   ```sh
+   npm run dev
+   ```
+
+No API key needed — the app uses [Frankfurter](https://www.frankfurter.app/), a free and open exchange rate API.
+
+## Usage
+
+1. Enter an amount in the top field
+2. Select the source currency
+3. Select the target currency
+4. Click **Convert**
+
+## Roadmap
+
+- [x] Live currency conversion
+- [x] Support for USD, EUR, GBP
+- [ ] Add support for more currencies
+- [ ] Add historical rates (convert with the rates of a specific date)
