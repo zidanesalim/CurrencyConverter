@@ -10,7 +10,7 @@
 
 ## About The Project
 
-[![Product Screenshot][product-screenshot]](https://github.com/zidanesalim/CurrencyConverter)
+![Website Screenshot](/images/screenshot.png)
 
 A minimal currency converter that lets you quickly convert between major currencies using live exchange rates — no API key required.
 
