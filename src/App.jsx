@@ -26,6 +26,7 @@ function App() {
                             readOnly={false}
                             onChange={setAmount}
                             onCurrencyChange={setFromCurrency}
+                            currency={fromCurrency}
                         />
                         <ConvertButton
                             amount={amount}
@@ -37,6 +38,7 @@ function App() {
                             readOnly={true}
                             result={result}
                             onCurrencyChange={setToCurrency}
+                            currency={toCurrency}
                         />
                     </div>
 
