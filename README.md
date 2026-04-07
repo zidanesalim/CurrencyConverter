@@ -60,5 +60,5 @@ No API key needed — the app uses [Frankfurter](https://www.frankfurter.app/), 
 
 - [x] Live currency conversion
 - [x] Support for USD, EUR, GBP
-- [ ] Add support for more currencies
-- [ ] Add historical rates (convert with the rates of a specific date)
+- [x] Support for more currencies
+- [ ] Historical rates (convert with the rates of a specific date)
