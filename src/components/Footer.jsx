@@ -1,4 +1,4 @@
-function CurrencyButton() {
+function Footer() {
     return (
         <div className="flex flex-col justify-center items-center pt-10">
             <div className="w-3xl h-0.5 bg-white/20"></div>
@@ -11,4 +11,4 @@ function CurrencyButton() {
     )
 }
 
-export default CurrencyButton
+export default Footer
