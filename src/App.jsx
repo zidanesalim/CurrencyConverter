@@ -17,7 +17,7 @@ function App() {
             <div
                 className="overflow-x-hidden min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-[#3C87B1] to-[#0B3D91]">
 
-                <main className="flex flex-col flex-1 items-center">
+                <main className="flex flex-col flex-1 justify-center items-center">
 
                     <img src="/CurrencyConvertIcon.png" className="h-40 md:h-80 lg:h-100 w-auto"
                          alt="Currency Converter icon"/>
