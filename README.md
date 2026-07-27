@@ -10,7 +10,7 @@
 
 ## About The Project
 
-![Website Screenshot](/images/screenshot.png)
+![Website Screenshot](/docs/screenshot.png)
 
 A minimal currency converter that lets you quickly convert between major currencies using live exchange rates — no API key required.
 
