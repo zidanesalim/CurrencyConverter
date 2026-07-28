@@ -1,19 +1,34 @@
-import { SiGithub } from '@icons-pack/react-simple-icons'
+function Footer({ name, socialLinks }) {
+    const year = new Date().getFullYear()
 
-function Footer() {
     return (
-        <div className="flex flex-col items-center pt-10">
-            <div className="w-3xl h-0.5 bg-white/20"></div>
-            <div className="w-3xl flex flex-row justify-between items-center py-2 px-4">
-                <span className="text-white/60 text-xs">© 2026 Salim Zidane. All rights reserved.</span>
-                <div className="flex flex-row gap-6">
-                    <a href="https://github.com/zidanesalim" className="text-white/60 hover:text-white transition-colors">
-                        <SiGithub size={18} />
-                    </a>
+        <footer className="w-full">
+            <div className="h-[0.5px] bg-white/20" />
+            <div className="px-4 sm:px-6">
+                <div className="flex flex-wrap gap-y-2 min-h-16 sm:h-20 items-center justify-between">
+                    <p className="text-xs sm:text-sm text-white/60">
+                        © {year} <b className="text-white">{name}</b>, All rights reserved.
+                    </p>
+                    <div className="flex items-center gap-4">
+                        {Object.entries(socialLinks).map(([slug, link]) => {
+                            const Icon = link.icon
+                            return (
+                                <a
+                                    key={slug}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label={link.label}
+                                    className="text-white/60 hover:text-white transition-colors"
+                                >
+                                    <Icon size={18} />
+                                </a>
+                            )
+                        })}
+                    </div>
                 </div>
-
             </div>
-        </div>
+        </footer>
     )
 }
 
