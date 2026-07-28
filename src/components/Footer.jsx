@@ -4,9 +4,9 @@ function Footer({ name, socialLinks }) {
     return (
         <footer className="w-full">
             <div className="h-[0.5px] bg-white/20" />
-            <div className="px-6">
-                <div className="flex h-20 items-center justify-between">
-                    <p className="text-sm text-white/60">
+            <div className="px-4 sm:px-6">
+                <div className="flex flex-wrap gap-y-2 min-h-16 sm:h-20 items-center justify-between">
+                    <p className="text-xs sm:text-sm text-white/60">
                         © {year} <b className="text-white">{name}</b>, All rights reserved.
                     </p>
                     <div className="flex items-center gap-4">
