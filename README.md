@@ -2,9 +2,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/zidanesalim/CurrencyConverter">
-    <img src="public/CurrencyConvertIcon.png" alt="Logo" width="960" height="560">
+    <img src="public/CurrencyConvertIcon.png" alt="Logo" width="320" height="187">
   </a>
-
   <h3 align="center">Currency Converter</h3>
 </div>
 
@@ -12,8 +11,7 @@
 
 ![Website Screenshot](/docs/screenshot.png)
 
-A minimal currency converter that lets you quickly convert between major currencies using live exchange rates — no API key required.
-
+Currency converter that lets you quickly convert between major currencies using live exchange rates, no API key required.
 
 ## Built With
 
