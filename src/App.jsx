@@ -1,6 +1,7 @@
 import CurrencyButton from "./components/CurrencyButton";
 import Footer from "@/components/Footer.jsx";
 import ConvertButton from "@/components/ConvertButton.jsx";
+import { socialLinks } from "@/data/socialLinks.js";
 import { useState } from 'react'
 
 
@@ -44,7 +45,7 @@ function App() {
 
                 </main>
 
-                <Footer/>
+                <Footer name="Salim Zidane" socialLinks={socialLinks}/>
 
             </div>
         </>
