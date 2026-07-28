@@ -52,11 +52,9 @@ function CurrencyButton({ readOnly, onChange, onCurrencyChange, result, currency
                         <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectContent>
-                            {currencies.map((c) => (
-                                <SelectItem key={c.code} value={c.code}>{c.label}</SelectItem>
-                            ))}
-                        </SelectContent>
+                        {currencies.map((c) => (
+                            <SelectItem key={c.code} value={c.code}>{c.label}</SelectItem>
+                        ))}
                     </SelectContent>
                 </Select>
             </div>
