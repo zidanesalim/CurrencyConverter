@@ -1,41 +1,8 @@
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import {Input} from "@/components/ui/input.jsx";
+import { currencies } from "@/data/currencies.js"
 
 function CurrencyButton({ readOnly, onChange, onCurrencyChange, result, currency }) {
-
-    const currencies = [
-        { code: "AUD", label: "Australian Dollar" },
-        { code: "BRL", label: "Brazilian Real" },
-        { code: "CAD", label: "Canadian Dollar" },
-        { code: "CHF", label: "Swiss Franc" },
-        { code: "CNY", label: "Chinese Renminbi Yuan" },
-        { code: "CZK", label: "Czech Koruna" },
-        { code: "DKK", label: "Danish Krone" },
-        { code: "EUR", label: "Euro" },
-        { code: "GBP", label: "British Pound" },
-        { code: "HKD", label: "Hong Kong Dollar" },
-        { code: "HUF", label: "Hungarian Forint" },
-        { code: "IDR", label: "Indonesian Rupiah" },
-        { code: "ILS", label: "Israeli New Shekel" },
-        { code: "INR", label: "Indian Rupee" },
-        { code: "ISK", label: "Icelandic Króna" },
-        { code: "JPY", label: "Japanese Yen" },
-        { code: "KRW", label: "South Korean Won" },
-        { code: "MXN", label: "Mexican Peso" },
-        { code: "MYR", label: "Malaysian Ringgit" },
-        { code: "NOK", label: "Norwegian Krone" },
-        { code: "NZD", label: "New Zealand Dollar" },
-        { code: "PHP", label: "Philippine Peso" },
-        { code: "PLN", label: "Polish Złoty" },
-        { code: "RON", label: "Romanian Leu" },
-        { code: "SEK", label: "Swedish Krona" },
-        { code: "SGD", label: "Singapore Dollar" },
-        { code: "THB", label: "Thai Baht" },
-        { code: "TRY", label: "Turkish Lira" },
-        { code: "USD", label: "United States Dollar" },
-        { code: "ZAR", label: "South African Rand" },
-    ]
-
 
     return (
         <>
