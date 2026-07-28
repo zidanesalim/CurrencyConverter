@@ -20,11 +20,11 @@ function App() {
 
                 <div className="w-full max-w-4xl flex flex-col flex-1 items-center">
 
-                    <main className="flex flex-col flex-1 justify-center items-center">
+                    <main className="w-full flex flex-col flex-1 justify-center items-center px-4 sm:px-6">
 
                         <img src="/CurrencyConvertIcon.png" className="h-40 md:h-80 lg:h-100 w-auto"
                              alt="Currency Converter icon"/>
-                        <div className="flex flex-col justify-center items-center gap-4">
+                        <div className="flex flex-col justify-center items-center gap-4 w-full max-w-md">
                             <CurrencyButton
                                 readOnly={false}
                                 onChange={setAmount}
