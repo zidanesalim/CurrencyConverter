@@ -4,7 +4,7 @@ function Footer({ name, socialLinks }) {
     return (
         <footer className="w-full">
             <div className="h-[0.5px] bg-white/20" />
-            <div className="mx-auto max-w-4xl px-6">
+            <div className="px-6">
                 <div className="flex h-20 items-center justify-between">
                     <p className="text-sm text-white/60">
                         © {year} <b className="text-white">{name}</b>, All rights reserved.
