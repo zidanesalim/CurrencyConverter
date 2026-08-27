@@ -3,6 +3,7 @@ import Footer from "@/components/Footer.jsx";
 import ConvertButton from "@/components/ConvertButton.jsx";
 import { socialLinks } from "@/data/socialLinks.js";
 import { useState } from 'react'
+import SwitchButton from "./components/SwitchButton";
 
 
 
@@ -12,6 +13,12 @@ function App() {
     const [fromCurrency, setFromCurrency] = useState("USD")
     const [toCurrency, setToCurrency] = useState("EUR")
     const [result, setResult] = useState(null)
+
+    function handleSwitch() {
+        setFromCurrency(toCurrency)
+        setToCurrency(fromCurrency)
+        setResult(null)
+    }
 
     return (
         <>
@@ -31,12 +38,17 @@ function App() {
                                 onCurrencyChange={setFromCurrency}
                                 currency={fromCurrency}
                             />
-                            <ConvertButton
-                                amount={amount}
-                                fromCurrency={fromCurrency}
-                                toCurrency={toCurrency}
-                                onResult={setResult}
-                            />
+                            <div className="flex items-center gap-4">
+                                <ConvertButton
+                                    amount={amount}
+                                    fromCurrency={fromCurrency}
+                                    toCurrency={toCurrency}
+                                    onResult={setResult}
+                                />
+
+                                <SwitchButton onSwitch={handleSwitch} />
+                            </div>
+
                             <CurrencyButton
                                 readOnly={true}
                                 result={result}
