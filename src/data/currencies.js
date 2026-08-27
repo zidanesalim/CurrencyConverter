@@ -29,4 +29,5 @@ export const currencies = [
     { code: "TRY", label: "Turkish Lira" },
     { code: "USD", label: "United States Dollar" },
     { code: "ZAR", label: "South African Rand" },
+    {code: "RBX", label: "Robux"}
 ]
