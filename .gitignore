@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Local secrets — keep .env.example in sync when adding variables
+.env
+.env.*
+!.env.example
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

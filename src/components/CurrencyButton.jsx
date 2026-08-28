@@ -1,12 +1,12 @@
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import {Input} from "@/components/ui/input.jsx";
-import { currencies } from "@/data/currencies.js"
+import { currencies as fallbackCurrencies, labelFor } from "@/data/currencies.js"
 import { useIsMobile } from "@/hooks/useMobile.js"
 
-function CurrencyButton({ readOnly, onChange, onCurrencyChange, result, currency }) {
+function CurrencyButton({ readOnly, onChange, onCurrencyChange, result, currency, currencies = fallbackCurrencies }) {
 
     const isMobile = useIsMobile()
-    const selectedLabel = currencies.find((c) => c.code === currency)?.label ?? currency
+    const selectedLabel = labelFor(currency)
 
     return (
         <>
