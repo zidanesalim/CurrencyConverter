@@ -29,5 +29,38 @@ export const currencies = [
     { code: "TRY", label: "Turkish Lira" },
     { code: "USD", label: "United States Dollar" },
     { code: "ZAR", label: "South African Rand" },
-    {code: "RBX", label: "Robux"}
 ]
+
+const displayNames = (() => {
+    try {
+        return new Intl.DisplayNames(["en"], { type: "currency" })
+    } catch {
+        return null
+    }
+})()
+
+/** Human-readable name for an ISO code, falling back to the code itself. */
+export function labelFor(code) {
+    const known = currencies.find((c) => c.code === code)
+    if (known) return known.label
+    try {
+        // Throws RangeError for the non-ISO-4217 codes (crypto, metals) that
+        // CurrencyAPI mixes into its list.
+        const name = displayNames?.of(code)
+        return name && name !== code ? name : code
+    } catch {
+        return code
+    }
+}
+
+/**
+ * Builds the selectable currency list from whatever the live rate table
+ * offers — ~170 currencies with a key, ~30 on the keyless fallback — so the
+ * dropdown never lists a pair the API cannot actually convert.
+ */
+export function currenciesFrom(table) {
+    if (!table) return currencies
+    return Object.keys(table.rates)
+        .map((code) => ({ code, label: labelFor(code) }))
+        .sort((a, b) => a.label.localeCompare(b.label))
+}

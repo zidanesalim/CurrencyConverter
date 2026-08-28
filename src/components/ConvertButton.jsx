@@ -1,21 +1,23 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button.jsx"
-import { convertCurrency } from "@/lib/convertCurrency.js"
+import { convert } from "@/lib/currencyApi.js"
 
 function ConvertButton({ amount, fromCurrency, toCurrency, onResult }) {
     const [loading, setLoading] = useState(false)
 
     async function handleConvert() {
+        const parsed = Number.parseFloat(amount)
+        if (!Number.isFinite(parsed)) {
+            onResult(null)
+            return
+        }
+
         setLoading(true)
 
         try {
-            const result = await convertCurrency(
-                Number(amount),
-                fromCurrency,
-                toCurrency
-            )
-
-            onResult(result)
+            const { value } = await convert(parsed, fromCurrency, toCurrency)
+            // Sub-unit precision for tiny results, cents for everything else.
+            onResult(Number(value.toFixed(value !== 0 && Math.abs(value) < 1 ? 6 : 2)))
         } catch (error) {
             console.error("Conversion failed:", error)
             onResult(null)
